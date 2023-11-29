@@ -1,0 +1,7 @@
+{
+  "env": [
+    { "OMOOLAB_NAS": "O:" },
+    { "OMOOLAB_CREATOR": "YourName" },
+    { "OMOOLAB_CONFIG": "$OMOOLAB_NAS/Resouces/Configs/Houdini" }
+  ]
+}
