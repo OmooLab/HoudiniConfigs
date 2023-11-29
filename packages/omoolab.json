@@ -1,12 +1,5 @@
 {
-  "hpath": [
-    {
-      "value": "$OMOOLAB_PREFERS",
-      "method": "append"
-    }
-  ],
   "env": [
-    { "OMOOLAB_CREATOR": "YourName" },
     { "OMOOLAB_NAS": "O:" },
     { "OMOOLAB_OMOOLAB": "$OMOOLAB_NAS/OmooLab" },
     { "OMOOLAB_PROJECTS": "$OMOOLAB_NAS/Projects" },
@@ -14,18 +7,12 @@
     { "OMOOLAB_RND": "$OMOOLAB_NAS/RnD" },
     { "OMOOLAB_CONFIG": "$OMOOLAB_RESOUCES/Configs/Houdini" },
     { "OMOOLAB_PREFERS": "$OMOOLAB_CONFIG/preferences" },
-    { "PYTHONPATH": "$OMOOLAB_CONFIG/venv/Lib/site-packages" },
     { "OCIO": "$HFS/houdini/ocio/config-aces-cg.ocio" },
     { "HOUDINI_SPLASH_FILE": "$OMOOLAB_CONFIG/splash.png" },
-    {
-      "HOUDINI_OTLSCAN_PATH": {
-        "method": "prepend",
-        "value": ["$OMOOLAB_CONFIG/hdas"]
-      },
-      "HOUDINI_MENU_PATH": {
-        "method": "prepend",
-        "value": ["$OMOOLAB_PREFERS/menu"]
-      }
-    }
-  ]
+    { "HOUDINI_OTLSCAN_PATH": "$OMOOLAB_CONFIG/hdas" },
+    { "PYTHONPATH": "$OMOOLAB_CONFIG/venv/Lib/site-packages" },
+    { "HOUDINI_MENU_PATH": "$OMOOLAB_PREFERS/menu" }
+  ],
+  "hpath": "$OMOOLAB_PREFERS",
+  "enable": "houdini_version >= '19.5'"
 }
