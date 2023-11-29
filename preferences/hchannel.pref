@@ -1,0 +1,15 @@
+pref.chop_motion_samples := 10;
+pref.fps := 30;
+pref.frame_end := 300;
+pref.frame_start := 1;
+pref.frame_step := 1;
+pref.integer_frames := 1;
+pref.realtime_behavior := 1;
+pref.realtime_multiplier := 1;
+pref.realtime_playback := 1;
+pref.restrict_range := 1;
+pref.show_audio := 1;
+pref.show_keys := 1;
+pref.show_range := 1;
+pref.show_simcache := 1;
+pref.show_ticks := 1;

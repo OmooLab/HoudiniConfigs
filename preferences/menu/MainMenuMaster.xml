@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mainMenu>
+  <menuBar>
+    <subMenu id="omoolab">
+      <label>OmooLab</label>
+
+      <titleItem><label>Omoospace Path:</label></titleItem>
+      <scriptItem>
+        <labelExpression>hou.getenv('JOB')</labelExpression>
+      </scriptItem>
+
+      <titleItem><label>Subspace Route:</label></titleItem>
+      <scriptItem>
+        <labelExpression>hou.getenv('ROUTE')</labelExpression>
+      </scriptItem>
+
+      <separatorItem/>
+
+      <scriptItem>
+        <label>Init File</label>
+        <scriptCode><![CDATA[
+from omoolab.prepare import init_file
+init_file()
+]]>
+        </scriptCode>
+      </scriptItem>
+
+    </subMenu>
+  </menuBar>
+</mainMenu>
