@@ -1,2 +1,2 @@
 biotite==0.38.0
-omoospace==0.1.6
+omoospace==0.1.7
