@@ -22,6 +22,7 @@ reveal_in_explorer(hou.getenv('JOB'))
 import hou
 import pyperclip
 pyperclip.copy(hou.getenv('ROUTE'))
+print(f"Copy to Clipboard: {hou.getenv('ROUTE')}")
 ]]>
         </scriptCode>
       </scriptItem>
