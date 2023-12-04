@@ -10,6 +10,7 @@
     { "HOUDINI_SPLASH_FILE": "$OMOOLAB_CONFIG/splash.png" },
     { "HOUDINI_OTLSCAN_PATH": "$OMOOLAB_CONFIG/hdas" },
     { "HOUDINI_MENU_PATH": "$OMOOLAB_PREFERS/menu" },
+    { "HOUDINI_BACKUP_FILENAME": "$BASENAME/$BASENAME_bak$N" },
     { "OCIO": "$HFS/houdini/ocio/config-aces-cg.ocio" },
     { "PYTHONPATH": "$OMOOLAB_CONFIG/venv/Lib/site-packages" }
   ],

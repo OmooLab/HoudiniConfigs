@@ -12,14 +12,10 @@ def set_file_env():
     try:
         file_path = Path(hou.hipFile.path()).resolve()
         omoos_path = Omoospace(file_path).root_path.as_posix()
-        # hou.putenv("JOB", omoos_path)
-        hou.hscript(f"setenv JOB = {omoos_path}")
-        print(f"Current omoospace path $JOB: {omoos_path}")
-
+    
         route_str = get_route_str(file_path)
-        # hou.putenv("ROUTE", route_str)
-        # hou.putenv not save to file. so use hscript "setenv"
-        hou.hscript(f"setenv ROUTE = {route_str}")
+        
+        print(f"Current omoospace path $JOB: {omoos_path}")
         print(f"Current subspace route $ROUTE: {route_str}")
 
     except:
@@ -32,18 +28,20 @@ def set_file_env():
                 description="Default omoospace inited by houdini as default project.",
                 reveal_in_explorer=False
             )
-        default_omoos_path = default_omoos.root_path.as_posix()
-        # hou.putenv("JOB", default_omoos_path)
-        hou.hscript(f"setenv JOB = {default_omoos_path}")
+        omoos_path = default_omoos.root_path.as_posix()
         
         route_str = "Untitled"
-        # hou.putenv("ROUTE", route_str)
-        # hou.putenv not save to file. so use hscript "setenv"
-        hou.hscript(f"setenv ROUTE = {route_str}")
 
         print("No omoospace detected, so...")
-        print(f"set default omoospace path $JOB: {default_omoos_path}")
+        print(f"set default omoospace path $JOB: {omoos_path}")
         print(f"set default subspace route $ROUTE: {route_str}")
+        
+    # hou.putenv not save to file. so use hscript "setenv"
+    hou.hscript(f"setenv JOB = {omoos_path}")
+    hou.hscript(f"setenv ROUTE = {route_str}")
+    
+    backup_dir = Path(omoos_path,"StagedData/Backup").as_posix()
+    hou.putenv("HOUDINI_BACKUP_DIR", backup_dir)
 
 
 def install_hda():
