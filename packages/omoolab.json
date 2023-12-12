@@ -11,8 +11,22 @@
     { "HOUDINI_OTLSCAN_PATH": "$OMOOLAB_CONFIG/hdas" },
     { "HOUDINI_MENU_PATH": "$OMOOLAB_PREFERS/menu" },
     { "HOUDINI_BACKUP_FILENAME": "$BASENAME/$BASENAME_bak$N" },
-    { "OCIO": "$HFS/houdini/ocio/config-aces-cg.ocio" },
-    { "PYTHONPATH": "$OMOOLAB_CONFIG/venv/Lib/site-packages" }
+    {
+      "OCIO": {
+        "houdini_version == '19.5'": "$HFS/houdini/ocio/config-aces-cg.ocio"
+      }
+    },
+    {
+      "PYTHONPATH": [
+        "$OMOOLAB_CONFIG/python",
+        {
+          "houdini_version == '19.5'": "$OMOOLAB_CONFIG/venv/Lib/site-packages"
+        },
+        {
+          "houdini_version > '19.5'": "$OMOOLAB_CONFIG/venv_20/Lib/site-packages"
+        }
+      ]
+    }
   ],
   "hpath": "$OMOOLAB_PREFERS"
 }

@@ -16,10 +16,19 @@ $ git clone https://github.com/OmooLab/HoudiniConfig.git
 $ cd HoudiniConfig
 ```
 
-Create python virtualenv for houdini.
+Create python virtualenv for Houdini 19.5.
 
 ```bash
+$ pyenv global 3.9.10 # <- python verison of houdini 19.5
 $ python -m venv venv
+$ source venv/Scripts/activate
+```
+
+if you are using Houdini 20
+
+```bash
+$ pyenv global 3.10.10 # <- python verison of houdini 20
+$ python -m venv venv_20
 $ source venv/Scripts/activate
 ```
 
