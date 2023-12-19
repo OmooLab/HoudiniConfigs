@@ -163,3 +163,5 @@ cython_debug/
 hdas/backup
 
 venv*
+
+*.rat

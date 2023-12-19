@@ -12,9 +12,14 @@
     { "HOUDINI_MENU_PATH": "$OMOOLAB_PREFERS/menu" },
     { "HOUDINI_BACKUP_FILENAME": "$BASENAME/$BASENAME_bak$N" },
     {
-      "OCIO": {
-        "houdini_version == '19.5'": "$HFS/houdini/ocio/config-aces-cg.ocio"
-      }
+      "OCIO": [
+        {
+          "houdini_version == '19.5'": "$HFS/houdini/ocio/config-aces-cg.ocio"
+        },
+        {
+          "houdini_version > '19.5'": "$OMOOLAB_CONFIG/ocio/houdini-config-v1.0.0_aces-v1.3_ocio-v2.1.ocio"
+        }
+      ]
     },
     {
       "PYTHONPATH": [
