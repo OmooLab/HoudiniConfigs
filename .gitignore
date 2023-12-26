@@ -160,8 +160,4 @@ cython_debug/
 #.idea/
 
 # HDA backup
-hdas/backup
-
-venv*
-
-*.rat
+HDAs/backup

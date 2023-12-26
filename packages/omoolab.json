@@ -1,5 +1,4 @@
 {
-  "requires": "omoolab_env",
   "enable": "houdini_os == 'windows' and houdini_version >= '19.5'",
   "load_package_once": true,
   "env": [
@@ -7,31 +6,19 @@
     { "OMOOLAB_PROJECTS": "$OMOOLAB_NAS/Projects" },
     { "OMOOLAB_RESOUCES": "$OMOOLAB_NAS/Resouces" },
     { "OMOOLAB_RND": "$OMOOLAB_NAS/RnD" },
-    { "OMOOLAB_PREFERS": "$OMOOLAB_CONFIG/preferences" },
-    { "HOUDINI_SPLASH_FILE": "$OMOOLAB_CONFIG/splash.png" },
-    { "HOUDINI_OTLSCAN_PATH": "$OMOOLAB_CONFIG/hdas" },
-    { "HOUDINI_MENU_PATH": "$OMOOLAB_PREFERS/menu" },
-    { "HOUDINI_BACKUP_FILENAME": "$BASENAME/$BASENAME_bak$N" },
+
+    { "OMOOLAB_PATH": "$HOUDINI_PACKAGE_PATH/.." },
+    { "OMOOLAB_PREFERS": "$OMOOLAB_PATH/preferences" },
+    { "HOUDINI_SPLASH_FILE": "$OMOOLAB_PATH/splash.png" },
     {
       "OCIO": {
-        "houdini_version == '19.5'": "$HFS/houdini/ocio/config-aces-cg.ocio"
+        "houdini_version == '19.5'": "$HFS/houdini/OCIO/config-aces-cg.ocio"
       }
     },
     {
       "OCIO": {
-        "houdini_version > '19.5'": "$OMOOLAB_CONFIG/ocio/houdini-config-v1.0.0_aces-v1.3_ocio-v2.1.ocio"
+        "houdini_version > '19.5'": "$OMOOLAB_PATH/OCIO/houdini-config-v1.0.0_aces-v1.3_ocio-v2.1.ocio"
       }
-    },
-    {
-      "PYTHONPATH": [
-        "$OMOOLAB_CONFIG/python",
-        {
-          "houdini_version == '19.5'": "$OMOOLAB_CONFIG/venv/Lib/site-packages"
-        },
-        {
-          "houdini_version > '19.5'": "$OMOOLAB_CONFIG/venv_20/Lib/site-packages"
-        }
-      ]
     }
   ],
   "hpath": "$OMOOLAB_PREFERS"
