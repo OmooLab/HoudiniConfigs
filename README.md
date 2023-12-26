@@ -1,4 +1,4 @@
-# Houdini Config
+# OmooLab Houdini Config
 
 This is the houdini config repository of omoolab.
 
