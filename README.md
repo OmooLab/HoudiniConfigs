@@ -1,4 +1,4 @@
-# OmooLab Houdini Config
+# OmooLab Houdini Configs
 
 This is the houdini config repository of omoolab.
 
@@ -12,7 +12,7 @@ This is the houdini config repository of omoolab.
 Pull this repository.
 
 ```bash
-$ git clone https://github.com/OmooLab/HoudiniConfig.git
+$ git clone https://github.com/OmooLab/HoudiniConfigs.git
 ```
 
 Add it to houdini
@@ -25,7 +25,7 @@ Create a env file in packages houdiniX.Y/packages/env.json
     { "OMOOLAB_CREATOR": "YourName" }
   ],
   "package_path": [
-    "Path/to/HoudiniConfig/Packages"
+    "Path/to/HoudiniConfigs/Packages"
   ]
 }
 ```
