@@ -6,19 +6,11 @@
     { "OMOOLAB_PROJECTS": "$OMOOLAB_NAS/Projects" },
     { "OMOOLAB_RESOUCES": "$OMOOLAB_NAS/Resouces" },
     { "OMOOLAB_RND": "$OMOOLAB_NAS/RnD" },
-
     { "OMOOLAB_PATH": "$HOUDINI_PACKAGE_PATH/.." },
     { "OMOOLAB_PREFERS": "$OMOOLAB_PATH/preferences" },
     { "HOUDINI_SPLASH_FILE": "$OMOOLAB_PATH/splash.png" },
     {
-      "OCIO": {
-        "houdini_version == '19.5'": "$HFS/houdini/OCIO/config-aces-cg.ocio"
-      }
-    },
-    {
-      "OCIO": {
-        "houdini_version > '19.5'": "$OMOOLAB_PATH/OCIO/houdini-config-v1.0.0_aces-v1.3_ocio-v2.1.ocio"
-      }
+      "OCIO": "$OMOOLAB_PATH/OCIO/houdini-config-v1.0.0_aces-v1.3_ocio-v2.1.ocio"
     }
   ],
   "hpath": "$OMOOLAB_PREFERS"
